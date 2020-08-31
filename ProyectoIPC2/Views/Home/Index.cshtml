@@ -1,31 +1,77 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Login";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title Othello</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+</head>
+<div class="historia" align="center">
+    <h1>Iniciar Sesión</h1>
+    <div class="holi">
+        <div class="post" , align="center">
+            <input class=text1 style="WIDTH: 500px; HEIGHT: 50px"
+                   size=22 name=text1 placeholder="Nombre de usuario">
+        </div>
+
+        <div class="post" , align="center">
+            <input class=text1 style="WIDTH: 500px; HEIGHT: 50px" type="password"
+                   size=22 name=text1 placeholder="Contraseña">
+        </div>
+        <div class="post" , align="center">
+            <button type="button" onclick="~/Views/Shared/_Layout.cshtml" class=button1 style="WIDTH: 400px; HEIGHT: 50px"
+                    size=22 name=button1>
+                @Html.ActionLink("Inicia Sesión", "PantallaPrincipal", "Principal")
+            </button>
+        </div>
+        <div class="post" , align="center">
+            <p>¿Aun no eres Miembro?@Html.ActionLink("Registrate ahora", "View_Registro", "Registro")</p>
+        </div>
+    </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+<style>
+
+
+
+    .historia {
+        border: 20px solid #FFFFFF;
+        padding: 80px;
+        max-width: 2500px;
+        width: 80%;
+        margin: 20px auto;
+        font-family: 'Audiowide', cursive;
+    }
+
+    .post {
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        color: rgba(0, 0, 0, 0.75);
+        font-size: 2.5rem;
+    }
+
+    .text1 {
+        background-color: #FFFFFF;
+        border: 1px solid #EEEEEE;
+        width: 230px;
+        font-family: 'Audiowide', cursive;
+    }
+
+    .button1 {
+        background-color: #FF9033;
+        border: #FF9033;
+        color: #FF9033;
+        font-size: 1.1rem;
+    }
+
+    .regis {
+        color: #FFFFFF;
+        font-size: 1.2rem;
+    }
+</style>

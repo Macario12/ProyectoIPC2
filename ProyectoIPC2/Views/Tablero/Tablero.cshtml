@@ -1,0 +1,199 @@
+﻿
+@{
+    ViewBag.Title = "Tablero";
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title Othello</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+</head>
+
+
+<div class="main">
+</div>
+<table border="2px" class="tablero" align="center">
+    <tr>
+        <td class="bordes"></td>
+        <td width="60" height="60" align="center" class="bordes">A</td>
+        <td width="60" height="60" align="center" class="bordes">B</td>
+        <td width="60" height="60" align="center" class="bordes">C</td>
+        <td width="60" height="60" align="center" class="bordes">D</td>
+        <td width="60" height="60" align="center" class="bordes">E</td>
+        <td width="60" height="60" align="center" class="bordes">F</td>
+        <td width="60" height="60" align="center" class="bordes">G</td>
+        <td width="60" height="60" align="center" class="bordes">H</td>
+        <td width="60" height="60" align="center" class="bordes"></td>
+    </tr>
+    <tr>
+        <td width="60" height="60" align="center" class="bordes">1</td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="bordes">1</td>
+    </tr>
+    <tr>
+        <td width="60" height="60" align="center" class="bordes">2</td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="bordes">2</td>
+    </tr>
+    <tr>
+        <td width="60" height="60" align="center" class="bordes">3</td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="bordes">3</td>
+    </tr>
+    <tr>
+        <td width="60" height="60" align="center" class="bordes">4</td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"><div class="circuloWhite"></div></td>
+        <td width="60" height="60" align="center" class="fondotablero"><div class="circuloBlack"></div></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="bordes">4</td>
+    </tr>
+    <tr>
+        <td width="60" height="60" align="center" class="bordes">5</td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"><div class="circuloBlack"></div></td>
+        <td width="60" height="60" align="center" class="fondotablero"><div class="circuloWhite"></div></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="bordes">5</td>
+    </tr>
+    <tr>
+        <td width="60" height="60" align="center" class="bordes">6</td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="bordes">6</td>
+    </tr>
+    <tr>
+        <td width="60" height="60" align="center" class="bordes">7</td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="bordes">7</td>
+    </tr>
+    <tr>
+        <td width="60" height="60" align="center" class="bordes">8</td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="fondotablero"></td>
+        <td width="60" height="60" align="center" class="bordes">8</td>
+    </tr>
+    <tr>
+        <td class="bordes"></td>
+        <td width="60" height="60" align="center" class="bordes">A</td>
+        <td width="60" height="60" align="center" class="bordes">B</td>
+        <td width="60" height="60" align="center" class="bordes">C</td>
+        <td width="60" height="60" align="center" class="bordes">D</td>
+        <td width="60" height="60" align="center" class="bordes">E</td>
+        <td width="60" height="60" align="center" class="bordes">F</td>
+        <td width="60" height="60" align="center" class="bordes">G</td>
+        <td width="60" height="60" align="center" class="bordes">H</td>
+        <td width="60" height="60" align="center" class="bordes"></td>
+    </tr>
+
+
+</table>
+
+</div>
+
+<style>
+
+    body {
+        background-image: url("https://images2.alphacoders.com/489/thumb-1920-48992.png ");
+    }
+
+    .tablero {
+        border-color: black
+    }
+
+    .circuloBlack {
+        width: 40px;
+        height: 40px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: black;
+    }
+
+    .main {
+        display: flex;
+        align-items: center;
+    }
+
+    tr {
+        border-color: black
+    }
+
+    .circuloWhite {
+        width: 40px;
+        height: 40px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: #ffffff;
+    }
+
+    .fondotablero {
+        font-family: 'Roboto Slab', serif;
+        font-size: 2rem;
+        border-color: black;
+        background: #2aa806;
+    }
+
+    .bordes {
+        font-family: 'Roboto Slab', serif;
+        font-size: 2rem;
+        border-color: black;
+        background: #d8bd93;
+    }
+
+    .inputPunteo {
+        border-left: initial;
+    }
+</style>
